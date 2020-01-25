@@ -16,9 +16,7 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
     var current_location=req.body.location;
-    var time=req.body.time;
-    console.log(time);
-    
+    var time=req.body.time;    
     request("https://muslimsalat.com/"+current_location+"/"+time+".json?key=bb0ed6858bcada962e0ec0640b721e97",(err,response,body) =>{
         var data=JSON.parse(body);
         var fajr=data.items[0].fajr;

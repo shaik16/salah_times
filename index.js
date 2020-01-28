@@ -1,3 +1,4 @@
+$("#date").hide();
 function submitForm() { 
 var pat=/^[A-Za-z]+$/;
 var val=$("#loc").val();
@@ -7,3 +8,10 @@ if(ok)
 else    
     $("form").attr("method", "POST");
 };
+$("#dt").click(function () { 
+    $("#date").show();
+});
+
+$("#td").click(function () { 
+    $("#date").hide();
+});
